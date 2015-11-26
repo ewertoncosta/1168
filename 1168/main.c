@@ -7,55 +7,58 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-int main() {
-    int N, i,j, qtdleds;
-    char led[1000];
-    
-    scanf("%d",&N);
-    for(j=1;j<=N;j++){
-        qtdleds=0;
-    
-        scanf("%s",led);
-        for(i=0;i<strlen(led);i++){
-            if(led[i]=='1'){
-                qtdleds+=2;
+  
+int main (){
+    int N, i, j, leds;
+    char led [1000];
+      
+    scanf ("%d",&N);
+     
+    //Repete até o numero de casos de teste definido
+    for (j=1;j<=N;j++){
+        leds = 0;
+         
+        //Pede os numeros do Led 
+        scanf ("%s", led);
+        //Repete até chegar no tamanho do vetor de led
+        for (i=0;i<strlen(led);i++){
+            //Dependendo do numero que estiver na posicao, 
+            //soma o numero de leds necessarios
+            if(led [i]=='1'){
+            leds+=2;
             }
-            if(led[i]=='2'){
-                qtdleds+=5;
+            if(led [i]=='2'){
+            leds+=5;
             }
-            if(led[i]=='3'){
-                qtdleds+=5;
+            if(led [i]=='3'){
+            leds+=5;
             }
-            if(led[i]=='4'){
-                qtdleds+=4;
+            if(led [i]=='4'){
+            leds+=4;
             }
-            if(led[i]=='5'){
-                qtdleds+=5;
+            if(led [i]=='5'){
+            leds+=5;
             }
-            if(led[i]=='6'){
-                qtdleds+=6;
+            if(led [i]=='6'){
+            leds+=6;
             }
-            if(led[i]=='7'){
-                qtdleds+=3;
+            if(led [i]=='7'){
+            leds+=3;
             }
-            if(led[i]=='8'){
-                qtdleds+=7;
+            if(led [i]=='8'){
+            leds+=7;
             }
-            if(led[i]=='9'){
-                qtdleds+=6;
+            if(led [i]=='9'){
+            leds+=6;
             }
-            if(led[i]=='0'){
-                qtdleds+=6;
+            if(led [i]=='0'){
+            leds+=6;
             }
-            
         }
-        printf("%d leds\n",qtdleds);
+    //Imprime o valor
+    printf ("%d leds\n", leds);
     }
-    
-    return 0;
+return 0;
 }
